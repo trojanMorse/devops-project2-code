@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: devops-capstone-2
+ labels:
+  app: devops-2
+spec:
+ replicas: 2
+ selector:
+  matchLabels:
+   app: devops-2
+ template:
+  metadata:
+   labels:
+    app: devops-2
+  spec:
+   containers:
+   - name: devops-2
+     image: trojanmorse/devops-capstone-build:latest
+     ports:
+     - containerPort: 80
+       name: devops-2-port
