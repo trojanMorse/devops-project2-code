@@ -10,7 +10,7 @@ RUN apt upgrade -y
 
 RUN apt-get update && apt-get install apache2 -y
 
-COPY /website-master/index.html /var/www/html/
+COPY . /var/www/html/
 
 ENTRYPOINT apachectl -D FOREGROUND
 
