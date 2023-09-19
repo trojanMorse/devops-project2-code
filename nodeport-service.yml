@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-port-service-for-devops-2
+spec:
+  selector:
+    app: devops-2
+  type: NodePort
+  ports:
+  - name: devops-2-port
+    port: 80
+    nodePort: 30008
